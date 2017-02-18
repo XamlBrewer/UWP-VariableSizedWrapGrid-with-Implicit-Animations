@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Theme Resources -->
+
+    <!-- General Purpose -->
+    <SolidColorBrush x:Key="TenPercentDarkerBrush"
+                     Color="Black"
+                     Opacity=".1" />
+    <SolidColorBrush x:Key="TenPercentLighterBrush"
+                     Color="White"
+                     Opacity=".1" />
+    <SolidColorBrush x:Key="HighlightBrush"
+                     Color="OrangeRed" />
+
+    <!-- Header -->
+    <SolidColorBrush x:Key="TitlebarBackgroundBrush"
+                     Color="#004C28" />
+    <SolidColorBrush x:Key="TitlebarBackgroundDarkBrush"
+                     Color="#004C28" />
+    <SolidColorBrush x:Key="TitlebarBackgroundLightBrush"
+                     Color="#AE973B" />
+    <SolidColorBrush x:Key="StatusbarBackgroundBrush"
+                     Color="#004C28" />
+
+    <!-- Splitview Pane -->
+    <SolidColorBrush x:Key="SplitViewBackgroundBrush"
+                     Color="#009750" />
+    <SolidColorBrush x:Key="SplitViewForegroundBrush"
+                     Color="Yellow" />
+    <SolidColorBrush x:Key="HamburgerForegroundBrush"
+                     Color="OrangeRed" />
+
+    <!-- Splitview Content -->
+    <SolidColorBrush x:Key="PageBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="PageForegroundBrush"
+                     Color="Black" />
+    
+    <!-- Default Accent Color -->
+    <Color x:Key="DefaultAccentColor">#AE973B</Color>
+    <!-- Page specific accent colors -->
+    <Color x:Key="BirdAccentColor">#6899AA</Color>
+    <Color x:Key="DonkeyAccentColor">#814F1B</Color>
+    <Color x:Key="HorseAccentColor">Black</Color>
+    <Color x:Key="RabbitAccentColor">#CB5F76</Color>
+
+</ResourceDictionary>
