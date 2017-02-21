@@ -8,7 +8,7 @@ namespace Mvvm
         public ShellViewModel()
         {
             // Build the menus
-            Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("BirdIcon"), Text = "Bird", NavigationDestination = typeof(MainPage) });
+            Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("SeaHorseIcon"), Text = "Main", NavigationDestination = typeof(MainPage) });
 
             SecondMenu.Add(new MenuItem() { Glyph = Icon.GetIcon("InfoIcon"), Text = "About", NavigationDestination = typeof(AboutPage) });
         }
