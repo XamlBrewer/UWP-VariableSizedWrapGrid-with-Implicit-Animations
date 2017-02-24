@@ -5,213 +5,211 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <Grid Background="Transparent">
-        <GridView x:Name="GridView"
-                  SelectionMode="None"
-                  VerticalAlignment="Stretch"
-                  Margin="20 20 0 0">
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VariableSizedWrapGrid ItemHeight="100"
-                                           ItemWidth="250"
-                                           Orientation="Horizontal" />
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
+    <GridView x:Name="GridView"
+              SelectionMode="None"
+              VerticalAlignment="Stretch"
+              Margin="20 20 0 0">
+        <GridView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <VariableSizedWrapGrid ItemHeight="100"
+                                       ItemWidth="250"
+                                       Orientation="Horizontal" />
+            </ItemsPanelTemplate>
+        </GridView.ItemsPanel>
 
-            <!-- Image -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
-                          VariableSizedWrapGrid.RowSpan="3"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <Grid HorizontalAlignment="Left"
+        <!-- Image -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
+                      VariableSizedWrapGrid.RowSpan="3"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+                <Image Stretch="Uniform"
+                       Source="ms-appx:///Assets/aquaman.jpg" />
+            </Grid>
+        </GridViewItem>
+
+        <!-- Description -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+                <TextBlock TextWrapping="WrapWholeWords">Aquaman is the telepathic ruler of Atlantis and the Earth's oceans, an Atlantean with incredible strength and speed as well as the ability to command all sea-life. His unique physiology allows him to survive on land and at the ocean's greatest depths of pressure and temperature. Given the names Orin through his royal heritage and Arthur Curry by his human upbringing, he fights to protect both worlds using his mighty abilities and political influence.</TextBlock>
+            </Grid>
+        </GridViewItem>
+
+        <!-- Characteristics -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Stretch"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <StackPanel HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top">
+                <TextBlock FontWeight="SemiBold"
+                           Foreground="RoyalBlue"
+                           Margin="0 0 0 4">Stats
+                </TextBlock>
+                <Grid HorizontalAlignment="Stretch"
                       VerticalAlignment="Top">
-                    <Image Stretch="Uniform"
-                           Source="ms-appx:///Assets/aquaman.jpg" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0">Race</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               Grid.Row="0"
+                               Grid.Column="1">Atlantean</TextBlock>
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="0">Gender</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               Grid.Row="1"
+                               Grid.Column="1">Male</TextBlock>
+                    <TextBlock Grid.Row="2"
+                               Grid.Column="0">Marital Status</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               TextAlignment="Right"
+                               Grid.Row="2"
+                               Grid.Column="1"><Run>Married</Run><LineBreak /><Run>with children</Run></TextBlock>
+                    <TextBlock Grid.Row="3"
+                               Grid.Column="0">Occupation</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               Grid.Row="3"
+                               Grid.Column="1">Monarch</TextBlock>
+                    <TextBlock Grid.Row="4"
+                               Grid.Column="0">Hair</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               Grid.Row="4"
+                               Grid.Column="1">Blond</TextBlock>
+                    <TextBlock Grid.Row="5"
+                               Grid.Column="0">Eyes</TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                               Grid.Row="5"
+                               Grid.Column="1">Yes</TextBlock>
                 </Grid>
-            </GridViewItem>
+            </StackPanel>
+        </GridViewItem>
 
-            <!-- Description -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <Grid HorizontalAlignment="Left"
-                      VerticalAlignment="Top">
-                    <TextBlock TextWrapping="WrapWholeWords">Aquaman is the telepathic ruler of Atlantis and the Earth's oceans, an Atlantean with incredible strength and speed as well as the ability to command all sea-life. His unique physiology allows him to survive on land and at the ocean's greatest depths of pressure and temperature. Given the names Orin through his royal heritage and Arthur Curry by his human upbringing, he fights to protect both worlds using his mighty abilities and political influence.</TextBlock>
-                </Grid>
-            </GridViewItem>
+        <!-- Dimensions -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Stretch"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <StackPanel HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top">
+                <TextBlock FontWeight="SemiBold"
+                           Foreground="RoyalBlue"
+                           Margin="0 0 0 4">Dimensions</TextBlock>
+                <Slider Header="Height"
+                        Value="6.1"
+                        Maximum="10" />
+                <Slider Header="Weight"
+                        Value="147"
+                        Maximum="200" />
+            </StackPanel>
+        </GridViewItem>
 
-            <!-- Characteristics -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Stretch"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <StackPanel HorizontalAlignment="Stretch"
-                            VerticalAlignment="Top">
-                    <TextBlock FontWeight="SemiBold"
-                               Foreground="RoyalBlue"
-                               Margin="0 0 0 4">Stats
-                    </TextBlock>
-                    <Grid HorizontalAlignment="Stretch"
-                          VerticalAlignment="Top">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0"
-                                   Grid.Column="0">Race</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   Grid.Row="0"
-                                   Grid.Column="1">Atlantean</TextBlock>
-                        <TextBlock Grid.Row="1"
-                                   Grid.Column="0">Gender</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   Grid.Row="1"
-                                   Grid.Column="1">Male</TextBlock>
-                        <TextBlock Grid.Row="2"
-                                   Grid.Column="0">Marital Status</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   TextAlignment="Right"
-                                   Grid.Row="2"
-                                   Grid.Column="1"><Run>Married</Run><LineBreak /><Run>with children</Run></TextBlock>
-                        <TextBlock Grid.Row="3"
-                                   Grid.Column="0">Occupation</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   Grid.Row="3"
-                                   Grid.Column="1">Monarch</TextBlock>
-                        <TextBlock Grid.Row="4"
-                                   Grid.Column="0">Hair</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   Grid.Row="4"
-                                   Grid.Column="1">Blond</TextBlock>
-                        <TextBlock Grid.Row="5"
-                                   Grid.Column="0">Eyes</TextBlock>
-                        <TextBlock HorizontalAlignment="Right"
-                                   Grid.Row="5"
-                                   Grid.Column="1">Yes</TextBlock>
-                    </Grid>
-                </StackPanel>
-            </GridViewItem>
+        <!-- Origin -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+                <TextBlock TextWrapping="WrapWholeWords">Arthur Curry was the son of a lighthouse keeper named Tom Curry and a woman named Atlanna. Tom Curry raised his son with wife in the local Lighthouse. Arthur started to manifest incredible strength and speed at a young age, as well as the abilities to breathe underwater and talk to fish. On her deathbed, his mother revealed that she was an exiled Queen of Atlantis and he would someday inherit rule of the seven seas. His father gave him an education and taught him to control his powers, eventually allowing him to grow up and become the super-hero Aquaman.</TextBlock>
+            </Grid>
+        </GridViewItem>
 
-            <!-- Dimensions -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Stretch"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <StackPanel HorizontalAlignment="Stretch"
-                            VerticalAlignment="Top">
-                    <TextBlock FontWeight="SemiBold"
-                               Foreground="RoyalBlue"
-                               Margin="0 0 0 4">Dimensions</TextBlock>
-                    <Slider Header="Height"
-                            Value="6.1"
-                            Maximum="10" />
-                    <Slider Header="Weight"
-                            Value="147"
-                            Maximum="200" />
-                </StackPanel>
-            </GridViewItem>
+        <!-- Weapons -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <StackPanel HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+                <TextBlock FontWeight="SemiBold"
+                           Foreground="RoyalBlue"
+                           Margin="0 0 0 4">Weapons</TextBlock>
+                <CheckBox Content="Trident of Neptune"
+                          IsChecked="True" />
+                <CheckBox Content="Harpoon"
+                          IsChecked="True" />
+                <CheckBox Content="Cybernetic Hand"
+                          IsChecked="True" />
+                <CheckBox Content="Black Lantern Ring"
+                          IsChecked="True" />
+            </StackPanel>
+        </GridViewItem>
 
-            <!-- Origin -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <Grid HorizontalAlignment="Left"
-                      VerticalAlignment="Top">
-                    <TextBlock TextWrapping="WrapWholeWords">Arthur Curry was the son of a lighthouse keeper named Tom Curry and a woman named Atlanna. Tom Curry raised his son with wife in the local Lighthouse. Arthur started to manifest incredible strength and speed at a young age, as well as the abilities to breathe underwater and talk to fish. On her deathbed, his mother revealed that she was an exiled Queen of Atlantis and he would someday inherit rule of the seven seas. His father gave him an education and taught him to control his powers, eventually allowing him to grow up and become the super-hero Aquaman.</TextBlock>
-                </Grid>
-            </GridViewItem>
-            
-            <!-- Weapons -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <StackPanel HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                    <TextBlock FontWeight="SemiBold"
-                               Foreground="RoyalBlue"
-                               Margin="0 0 0 4">Weapons</TextBlock>
-                    <CheckBox Content="Trident of Neptune"
-                              IsChecked="True" />
-                    <CheckBox Content="Harpoon"
-                              IsChecked="True" />
-                    <CheckBox Content="Cybernetic Hand"
-                              IsChecked="True" />
-                    <CheckBox Content="Black Lantern Ring"
-                              IsChecked="True" />
-                </StackPanel>
-            </GridViewItem>
-            
-            <!-- Justice League -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <Grid HorizontalAlignment="Left"
-                      VerticalAlignment="Top">
-                    <TextBlock TextWrapping="WrapWholeWords">Aquaman would go on to become a founding member of the Justice League of America, although their origins have been altered several times in continuity. The original founding members included Batman, The Flash, Green Lantern, Martian Manhunter, Superman and Wonder Woman. They met for the first time during an alien invasion by the Appellaxians. This was later amended Post-Crisis to write Batman and Superman out of the story, with Wonder Woman replaced by Black Canary.</TextBlock>
-                </Grid>
-            </GridViewItem>
+        <!-- Justice League -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+                <TextBlock TextWrapping="WrapWholeWords">Aquaman would go on to become a founding member of the Justice League of America, although their origins have been altered several times in continuity. The original founding members included Batman, The Flash, Green Lantern, Martian Manhunter, Superman and Wonder Woman. They met for the first time during an alien invasion by the Appellaxians. This was later amended Post-Crisis to write Batman and Superman out of the story, with Wonder Woman replaced by Black Canary.</TextBlock>
+            </Grid>
+        </GridViewItem>
 
-            <!-- Image -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
-                          VariableSizedWrapGrid.RowSpan="3"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <Grid HorizontalAlignment="Left"
-                      VerticalAlignment="Top">
-                    <Image Stretch="Uniform"
-                           Source="ms-appx:///Assets/Justice-League.jpg" />
-                </Grid>
-            </GridViewItem>
+        <!-- Image -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="2"
+                      VariableSizedWrapGrid.RowSpan="3"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+                <Image Stretch="Uniform"
+                       Source="ms-appx:///Assets/Justice-League.jpg" />
+            </Grid>
+        </GridViewItem>
 
-            <!-- Membership -->
-            <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
-                          VariableSizedWrapGrid.RowSpan="2"
-                          HorizontalContentAlignment="Left"
-                          VerticalContentAlignment="Top"
-                          Padding="0 0 20 20"
-                          Background="Transparent">
-                <StackPanel HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                    <TextBlock FontWeight="SemiBold"
-                               Foreground="RoyalBlue"
-                               Margin="0 0 0 4">Membership</TextBlock>
-                    <CheckBox Content="Justice League of America"
-                              IsChecked="True" />
-                    <CheckBox Content="Black Lantern Corps"
-                              IsChecked="True" />
-                    <CheckBox Content="White Lantern Corps"
-                              IsChecked="True" />
-                </StackPanel>
-            </GridViewItem>
+        <!-- Membership -->
+        <GridViewItem VariableSizedWrapGrid.ColumnSpan="1"
+                      VariableSizedWrapGrid.RowSpan="2"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Top"
+                      Padding="0 0 20 20"
+                      Background="Transparent">
+            <StackPanel HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+                <TextBlock FontWeight="SemiBold"
+                           Foreground="RoyalBlue"
+                           Margin="0 0 0 4">Membership</TextBlock>
+                <CheckBox Content="Justice League of America"
+                          IsChecked="True" />
+                <CheckBox Content="Black Lantern Corps"
+                          IsChecked="True" />
+                <CheckBox Content="White Lantern Corps"
+                          IsChecked="True" />
+            </StackPanel>
+        </GridViewItem>
 
-        </GridView>
-    </Grid>
+    </GridView>
 </Page>
