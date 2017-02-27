@@ -1,4 +1,4 @@
-# UWP-GridView-with-Implicit-Animations
+# UWP-VariablesizedWrapGrid-with-Implicit-Animations
 Demonstrates how to build a responsive fluid UI based on a VariableSizedWrapGrid and implicit animations.
 
 ##Sample
