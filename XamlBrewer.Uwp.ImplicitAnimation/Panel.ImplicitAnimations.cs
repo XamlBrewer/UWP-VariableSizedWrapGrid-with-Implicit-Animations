@@ -1,17 +1,22 @@
 ﻿using System;
+using Windows.Foundation.Metadata;
 using Windows.UI.Composition;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Hosting;
 
 namespace XamlBrewer.Uwp.ImplicitAnimation
 {
-    public static partial class ItemsControlExtensions
+    public static partial class PanelExtensions
     {
-        public static void RegisterImplicitAnimations(this ItemsControl itemsControl)
+        public static void RegisterImplicitAnimations(this Panel panel)
         {
-            var compositor = ElementCompositionPreview.GetElementVisual(itemsControl as UIElement).Compositor;
+            // Check if SDK > 14393
+            if (!ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 3))
+            {
+                return;
+            }
+
+            var compositor = ElementCompositionPreview.GetElementVisual(panel).Compositor;
 
             // Create ImplicitAnimations Collection. 
             var elementImplicitAnimation = compositor.CreateImplicitAnimationCollection();
@@ -19,7 +24,7 @@ namespace XamlBrewer.Uwp.ImplicitAnimation
             // Define trigger and animation that should play when the trigger is triggered. 
             elementImplicitAnimation["Offset"] = CreateOffsetAnimation(compositor);
 
-            foreach (SelectorItem item in itemsControl.Items)
+            foreach (var item in panel.Children)
             {
                 var elementVisual = ElementCompositionPreview.GetElementVisual(item);
                 elementVisual.ImplicitAnimations = elementImplicitAnimation;
@@ -29,7 +34,7 @@ namespace XamlBrewer.Uwp.ImplicitAnimation
         private static CompositionAnimationGroup CreateOffsetAnimation(Compositor compositor)
         {
             // Define Offset Animation for the Animation group
-            Vector3KeyFrameAnimation offsetAnimation = compositor.CreateVector3KeyFrameAnimation();
+            var offsetAnimation = compositor.CreateVector3KeyFrameAnimation();
             offsetAnimation.InsertExpressionKeyFrame(1.0f, "this.FinalValue");
             offsetAnimation.Duration = TimeSpan.FromSeconds(.4);
 
@@ -37,7 +42,7 @@ namespace XamlBrewer.Uwp.ImplicitAnimation
             offsetAnimation.Target = "Offset";
 
             // Define Rotation Animation for Animation Group. 
-            ScalarKeyFrameAnimation rotationAnimation = compositor.CreateScalarKeyFrameAnimation();
+            var rotationAnimation = compositor.CreateScalarKeyFrameAnimation();
             rotationAnimation.InsertKeyFrame(.5f, 0.160f);
             rotationAnimation.InsertKeyFrame(1f, 0f);
             rotationAnimation.Duration = TimeSpan.FromSeconds(.4);
@@ -46,7 +51,7 @@ namespace XamlBrewer.Uwp.ImplicitAnimation
             rotationAnimation.Target = "RotationAngle";
 
             // Add Animations to Animation group. 
-            CompositionAnimationGroup animationGroup = compositor.CreateAnimationGroup();
+            var animationGroup = compositor.CreateAnimationGroup();
             animationGroup.Add(offsetAnimation);
             animationGroup.Add(rotationAnimation);
 

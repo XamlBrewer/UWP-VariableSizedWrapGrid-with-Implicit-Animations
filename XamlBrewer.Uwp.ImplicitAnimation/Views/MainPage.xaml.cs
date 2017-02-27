@@ -9,7 +9,7 @@ namespace XamlBrewer.Uwp.ImplicitAnimation
             this.InitializeComponent();
 
             // Yep: that's all.
-            GridView.RegisterImplicitAnimations();
+            VariableSizedWrapGrid.RegisterImplicitAnimations();
         }
     }
 }
